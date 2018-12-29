@@ -39,6 +39,7 @@ tr:nth-child(even) {
                 <div class="col-sm">
                     <h3>{{selected_category.name}} items ({{items|length}} items)</h3>
                   <ul class="list-group">
+                      <a href="{{url_for('add_new_item')}}">Add Item</a>
                     {% for item in items %}
                         <a class="list-group-item" href="{{url_for('item_description',
                                                           category_name=selected_category.name,

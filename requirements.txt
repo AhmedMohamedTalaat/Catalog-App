@@ -14,6 +14,7 @@ crypto==1.4.1
 cymem==1.31.2
 cytoolz==0.9.0.1
 dill==0.2.8.2
+Django==2.1.1
 docutils==0.14
 Faker==0.9.1
 Flask==1.0.2
@@ -71,7 +72,7 @@ PyYAML==3.13
 raygun4py==3.1.4
 redis==2.10.6
 regex==2017.4.5
-requests>=2.20.0
+requests==2.9.1
 rq==0.12.0
 rsa==3.4.2
 s3transfer==0.1.13
