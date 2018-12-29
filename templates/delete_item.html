@@ -1,0 +1,12 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+<h1><b>Delete Item</b></h1>
+<form method = "post">
+    <di class="form-group">
+        <label >Are you sure you want to delete?</label>
+    </di>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+{% endblock%}

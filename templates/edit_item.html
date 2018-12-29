@@ -1,0 +1,24 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+<h1><b>Edit Item</b></h1>
+<form method = "post">
+    <di class="form-group">
+        <label >Title</label>
+        <input type="text" class="form-control" placeholder="Enter name" name="title">
+    </di>
+    <div class="form-group">
+        <label>Description</label>
+        <input type="text" class="form-control" placeholder="Enter description" name="description">
+    </div>
+    <div class="col-auto my-1">
+        <label>Category</label>
+        <select class="custom-select mr-sm-2" name="category_id">
+            {% for category in categories %}
+            <option value="{{category.id}}">{{category.name}}</option>
+            {% endfor %}
+      </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{%endblock%}

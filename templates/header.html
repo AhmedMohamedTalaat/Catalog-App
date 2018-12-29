@@ -1,0 +1,15 @@
+<nav class="navbar navbar-inverse">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="{{url_for('all_catalog')}}">Catalog App</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                {% if 'username' not in session %}
+                <li><a href="{{url_for('show_login')}}"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
+                {% else %}
+                <li><a href="{{url_for('gdisconnect')}}"><span class="glyphicon glyphicon-log-out"></span>Logout</a></li>
+                {% endif %}
+
+            </ul>
+          </div>
+        </nav>

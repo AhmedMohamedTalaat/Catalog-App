@@ -1,0 +1,56 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+    <style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+.floatedTable {
+            float:left;
+        }
+        .inlineTable {
+            display: inline-block;
+        }
+</style>
+
+     <main role="main" class="container">
+         <div class="jumbotron">
+              <div class="row">
+                <div class="col-sm">
+                    <h3>Catagories</h3>
+                  <ul class="list-group">
+                    {% for category in categories %}
+                        <a class="list-group-item" href="{{url_for('items_per_category',category_name=category.name)}}">{{category.name}}</a>
+                    {% endfor %}
+                  </ul>
+                </div>
+                <div class="col-sm">
+                    <h3>{{selected_category.name}} items ({{items|length}} items)</h3>
+                  <ul class="list-group">
+                    {% for item in items %}
+                        <a class="list-group-item" href="{{url_for('item_description',
+                                                          category_name=selected_category.name,
+                                                          item_name=item.name)}}">{{item.name}}</a>
+                    {% endfor %}
+                  </ul>
+                </div>
+              </div>
+         </div>
+    </main>
+
+
+
+
+{%endblock%}
